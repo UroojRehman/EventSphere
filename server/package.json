@@ -4,7 +4,7 @@
   "main": "server.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "Nodemon server.mjs",
+    "start": "Node server.mjs",
     "seed:demo": "node seedDemo.mjs"
   },
   "keywords": [],
