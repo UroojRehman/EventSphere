@@ -1,0 +1,387 @@
+/* =========================================================
+   ORGANIZER EDIT EVENT
+========================================================= */
+
+.organizer-edit-page {
+  min-height: 100vh;
+  padding: 55px 0 100px;
+  color: #0f172a;
+}
+
+.organizer-edit-container {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.organizer-edit-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 38px;
+}
+
+.organizer-edit-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 25px;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 800;
+  transition: 0.25s ease;
+}
+
+.organizer-edit-back:hover {
+  color: #0891b2;
+  transform: translateX(-2px);
+}
+
+.organizer-edit-kicker {
+  color: #0891b2;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+}
+
+.organizer-edit-header h1 {
+  margin-top: 10px;
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 0.95;
+  letter-spacing: -0.065em;
+  font-weight: 900;
+}
+
+.organizer-edit-header h1 span {
+  color: #0891b2;
+}
+
+.organizer-edit-header p {
+  max-width: 620px;
+  margin-top: 16px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.organizer-edit-icon {
+  width: 62px;
+  height: 62px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #cffafe;
+  border-radius: 18px;
+  background: #ecfeff;
+  color: #0891b2;
+}
+
+/* =========================================================
+   SUCCESS
+========================================================= */
+
+.organizer-edit-success {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  border: 1px solid #a7f3d0;
+  border-radius: 13px;
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.organizer-edit-success strong {
+  font-size: 12px;
+}
+
+.organizer-edit-success span {
+  font-size: 10px;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.organizer-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.organizer-edit-section {
+  padding: 28px;
+  border: 1px solid #e2e8f0;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 10px 35px rgba(15, 23, 42, 0.035);
+}
+
+.organizer-edit-section-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.organizer-edit-section-heading span {
+  color: #0891b2;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.organizer-edit-section-heading h2 {
+  margin-top: 6px;
+  color: #1e293b;
+  font-size: 23px;
+  letter-spacing: -0.035em;
+}
+
+.organizer-edit-section-heading > svg {
+  color: #0891b2;
+}
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.organizer-edit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 19px;
+  margin-top: 24px;
+}
+
+.organizer-edit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.organizer-edit-full {
+  grid-column: 1 / -1;
+}
+
+.organizer-edit-field > span {
+  color: #475569;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.organizer-edit-field input,
+.organizer-edit-field textarea,
+.organizer-edit-field select {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+  outline: none;
+  background: #f8fafc;
+  color: #1e293b;
+  font-family: inherit;
+  font-size: 12px;
+  transition: 0.25s ease;
+}
+
+.organizer-edit-field input,
+.organizer-edit-field select {
+  height: 46px;
+  padding: 0 13px;
+}
+
+.organizer-edit-field textarea {
+  min-height: 145px;
+  padding: 13px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.organizer-edit-field input:focus,
+.organizer-edit-field textarea:focus,
+.organizer-edit-field select:focus {
+  border-color: #67e8f9;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.07);
+}
+
+.organizer-edit-field select {
+  cursor: pointer;
+}
+
+.organizer-edit-field input::placeholder,
+.organizer-edit-field textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* =========================================================
+   INPUT ICON
+========================================================= */
+
+.organizer-edit-input-icon {
+  position: relative;
+}
+
+.organizer-edit-input-icon > svg {
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  z-index: 2;
+  transform: translateY(-50%);
+  color: #0891b2;
+  pointer-events: none;
+}
+
+.organizer-edit-input-icon input {
+  padding-left: 39px;
+}
+
+/* =========================================================
+   IMAGE PREVIEW
+========================================================= */
+
+.organizer-edit-preview {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  background: #f8fafc;
+}
+
+.organizer-edit-preview img {
+  width: 100px;
+  height: 68px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.organizer-edit-preview span {
+  display: block;
+  color: #0891b2;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.organizer-edit-preview strong {
+  display: block;
+  margin-top: 5px;
+  color: #334155;
+  font-size: 11px;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.organizer-edit-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 5px;
+}
+
+.organizer-edit-cancel,
+.organizer-edit-save {
+  min-height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 17px;
+  border-radius: 11px;
+  font-size: 11px;
+  font-weight: 900;
+  transition: 0.25s ease;
+}
+
+.organizer-edit-cancel {
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #64748b;
+}
+
+.organizer-edit-cancel:hover {
+  border-color: #bae6fd;
+  color: #0891b2;
+}
+
+.organizer-edit-save {
+  border: 0;
+  background: #0891b2;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(8, 145, 178, 0.18);
+}
+
+.organizer-edit-save:hover {
+  transform: translateY(-2px);
+  background: #0e7490;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+  .organizer-edit-container {
+    width: calc(100% - 28px);
+  }
+
+  .organizer-edit-header {
+    align-items: flex-start;
+  }
+
+  .organizer-edit-section {
+    padding: 21px;
+  }
+
+  .organizer-edit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .organizer-edit-full {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .organizer-edit-header {
+    flex-direction: column;
+  }
+
+  .organizer-edit-header h1 {
+    font-size: 43px;
+  }
+
+  .organizer-edit-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .organizer-edit-cancel,
+  .organizer-edit-save {
+    width: 100%;
+  }
+
+  .organizer-edit-preview {
+    align-items: flex-start;
+  }
+
+  .organizer-edit-preview img {
+    width: 85px;
+    height: 60px;
+  }
+}

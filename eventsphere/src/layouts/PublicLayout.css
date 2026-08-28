@@ -1,0 +1,217 @@
+/* =========================================================
+   EVENTSPHERE — PUBLIC LAYOUT
+   PREMIUM LIGHT THEME
+========================================================= */
+
+.public-layout {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  background: #f8fafc;
+
+  color: #0f172a;
+}
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.public-background {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f8fafc 42%,
+      #f8fafc 100%
+    );
+  animation: public-background-breathe 14s ease-in-out infinite alternate;
+}
+
+@keyframes public-background-breathe {
+  from { filter: saturate(0.96); }
+  to { filter: saturate(1.04); }
+}
+
+.public-glow {
+  position: absolute;
+
+  border-radius: 999px;
+
+  pointer-events: none;
+
+  filter: blur(110px);
+
+  opacity: 0.45;
+}
+
+.public-glow-one {
+  width: 430px;
+  height: 430px;
+
+  top: -180px;
+  left: -120px;
+
+  background: rgba(34, 211, 238, 0.10);
+  animation: public-glow-drift 16s ease-in-out infinite alternate;
+}
+
+.public-glow-two {
+  width: 500px;
+  height: 500px;
+
+  top: 28%;
+  right: -220px;
+
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.public-glow-three {
+  width: 380px;
+  height: 380px;
+
+  bottom: -180px;
+  left: 15%;
+
+  background: rgba(14, 165, 233, 0.06);
+  animation: public-glow-drift 19s ease-in-out -5s infinite alternate;
+}
+
+@keyframes public-glow-drift {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(20px, 14px, 0) scale(1.06); }
+}
+
+/* =========================================================
+   SUBTLE GRID
+========================================================= */
+
+.public-grid {
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.32;
+
+  background-image:
+    linear-gradient(
+      rgba(15, 23, 42, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(15, 23, 42, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 48px 48px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 75%
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 75%
+  );
+}
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.public-main {
+  position: relative;
+
+  z-index: 1;
+
+  width: 100%;
+
+  min-height: calc(100vh - 80px);
+
+  padding-top: 88px;
+}
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.public-page {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 400px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar-wrapper,
+  .navbar-link.active,
+  .public-background,
+  .public-glow-one,
+  .public-glow-three {
+    animation: none;
+  }
+
+  .navbar-main,
+  .navbar-logo-icon,
+  .navbar-mobile-button {
+    transition: none;
+  }
+}
+
+/* =========================================================
+   SAFETY FOR IMAGES
+========================================================= */
+
+.public-page img {
+  max-width: 100%;
+
+  height: auto;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1023px) {
+  .public-main {
+    padding-top: 82px;
+  }
+}
+
+@media (max-width: 640px) {
+  .public-main {
+    padding-top: 76px;
+  }
+
+  .public-glow-one {
+    width: 280px;
+    height: 280px;
+  }
+
+  .public-glow-two {
+    width: 300px;
+    height: 300px;
+  }
+
+  .public-grid {
+    background-size: 38px 38px;
+  }
+}

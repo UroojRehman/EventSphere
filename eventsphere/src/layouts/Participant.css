@@ -1,0 +1,532 @@
+/* =================================
+   PARTICIPANT - LIGHT THEME
+================================= */
+
+.participant-page {
+  width: 100%;
+  color: #0f172a;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.participant-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+
+  margin-bottom: 30px;
+}
+
+.participant-kicker {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #0891b2;
+
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+}
+
+.participant-header h1 {
+  margin: 10px 0 0;
+
+  font-size: clamp(38px, 5vw, 55px);
+  line-height: 0.95;
+
+  letter-spacing: -0.06em;
+  font-weight: 900;
+}
+
+.participant-header h1 span {
+  color: #0891b2;
+}
+
+.participant-header p {
+  margin-top: 13px;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+/* ================================
+   ADD BUTTON
+================================ */
+
+.participant-add-btn {
+  min-height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 0 16px;
+
+  border: 0;
+  border-radius: 11px;
+
+  background: #0891b2;
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 25px rgba(8, 145, 178, 0.16);
+
+  transition: 0.25s ease;
+}
+
+.participant-add-btn:hover {
+  transform: translateY(-2px);
+  background: #0e7490;
+}
+
+/* ================================
+   STATS
+================================ */
+
+.participant-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+
+  margin-bottom: 25px;
+}
+
+.participant-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 18px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.035);
+}
+
+.participant-stat-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  background: #ecfeff;
+  color: #0891b2;
+}
+
+.participant-stat-card span {
+  display: block;
+
+  color: #94a3b8;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.participant-stat-card strong {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #0f172a;
+
+  font-size: 23px;
+  line-height: 1;
+}
+
+/* ================================
+   TABLE CARD
+================================ */
+
+.participant-table-card {
+  overflow: hidden;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.035);
+}
+
+/* ================================
+   TABLE TOP
+================================ */
+
+.participant-table-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 22px 23px;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.participant-table-top h2 {
+  margin: 0;
+
+  font-size: 17px;
+  letter-spacing: -0.03em;
+}
+
+.participant-table-top > div:first-child span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #94a3b8;
+
+  font-size: 9px;
+}
+
+/* ================================
+   SEARCH
+================================ */
+
+.participant-search {
+  width: 250px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 0 12px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+
+  background: #f8fafc;
+
+  color: #94a3b8;
+
+  transition: 0.2s ease;
+}
+
+.participant-search:focus-within {
+  border-color: #67e8f9;
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(8, 145, 178, 0.06);
+}
+
+.participant-search input {
+  width: 100%;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #1e293b;
+
+  font-size: 11px;
+}
+
+.participant-search input::placeholder {
+  color: #94a3b8;
+}
+
+/* ================================
+   TABLE
+================================ */
+
+.participant-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.participant-table {
+  width: 100%;
+  min-width: 700px;
+
+  border-collapse: collapse;
+}
+
+.participant-table th {
+  padding: 14px 23px;
+
+  background: #f8fafc;
+
+  color: #94a3b8;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  text-align: left;
+
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.participant-table td {
+  padding: 16px 23px;
+
+  border-bottom: 1px solid #f1f5f9;
+
+  vertical-align: middle;
+}
+
+.participant-table tbody tr {
+  transition: 0.2s ease;
+}
+
+.participant-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.participant-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* ================================
+   PERSON
+================================ */
+
+.participant-person {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.participant-avatar {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  background: #cffafe;
+  color: #0891b2;
+
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.participant-person strong {
+  display: block;
+
+  color: #1e293b;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.participant-person span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  margin-top: 4px;
+
+  color: #94a3b8;
+
+  font-size: 9px;
+}
+
+/* ================================
+   EVENTS / REGISTRATIONS
+================================ */
+
+.participant-events {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 30px;
+  height: 27px;
+
+  padding: 0 8px;
+
+  border-radius: 8px;
+
+  background: #f1f5f9;
+  color: #334155;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* ================================
+   STATUS
+================================ */
+
+.participant-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.participant-status i {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+}
+
+.participant-status.active {
+  color: #059669;
+}
+
+.participant-status.active i {
+  background: #10b981;
+}
+
+.participant-status.inactive {
+  color: #94a3b8;
+}
+
+.participant-status.inactive i {
+  background: #cbd5e1;
+}
+
+/* ================================
+   DATE
+================================ */
+
+.participant-date {
+  color: #64748b;
+
+  font-size: 10px;
+}
+
+/* ================================
+   MORE BUTTON
+================================ */
+
+.participant-more {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #94a3b8;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.participant-more:hover {
+  background: #f1f5f9;
+  color: #0891b2;
+}
+
+/* ================================
+   EMPTY STATE
+================================ */
+
+.participant-empty {
+  padding: 60px 20px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  text-align: center;
+
+  color: #94a3b8;
+}
+
+.participant-empty svg {
+  color: #cbd5e1;
+}
+
+.participant-empty h3 {
+  margin: 12px 0 5px;
+
+  color: #334155;
+
+  font-size: 15px;
+}
+
+.participant-empty p {
+  margin: 0;
+
+  font-size: 11px;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 800px) {
+  .participant-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .participant-add-btn {
+    width: 100%;
+  }
+
+  .participant-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .participant-table-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .participant-search {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .participant-header h1 {
+    font-size: 40px;
+  }
+
+  .participant-table-top {
+    padding: 18px;
+  }
+
+  .participant-table th,
+  .participant-table td {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
