@@ -27,7 +27,7 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cors({
-    origin: "https://eventspherefrontend.onrender.com"
+    origin: "https://eventsphere-kfin.onrender.com"
 }));
 
 app.use("/uploads", express.static("uploads"));
